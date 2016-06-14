@@ -9,17 +9,27 @@
 <body>
   <header>
     <div class = "col-xs-3">
-      LOGO
+      <div class="circle">
+        <br />
+        You Know
+        <br />
+        you need
+        <br />
+        to code
+      </div>
     </div>
-    <div class = "col-xs-4">
+    <div class = "col-xs-4 slogan">
       Splurting out unsolicited advvice about Doing You since 2016
     </div>
-    <div class="col-xs-5">
+    <div class="col-xs-5 links">
       <%= link_to 'Contribute', '#' %>
       <%= link_to 'About', '#' %>
     </div>
   </header>
-<%= yield %>
+  <hr/>
+  <br class="clear" />
+
+  <%= yield %>
 
 </body>
 </html>
