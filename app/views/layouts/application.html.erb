@@ -1,58 +1,87 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SplurtySaa</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  
-</head>
-<body>
-  <header>
-    <div class = "col-xs-3">
-      <%= link_to root_path, class: 'logo' do %>
-      <div class="circle">
-        <br />
-        You Know
-        <br />
-        you need
-        <br />
-        to code
-      </div>
-      <% end %>
-    </div>
-    <div class = "col-xs-4 slogan">
-      Splurting out unsolicited advvice about Doing You since 2016
-    </div>
-    <div class="col-xs-5 links">
-      <%= link_to 'Contribute', new_quote_path %>
-      <%= link_to 'About', about_path %>
-    </div>
-  </header>
-  <hr/>
-  <br class="clear" />
+    <head>
+        <title>SplurtySaa</title>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
 
-  <div class = "container">
-    <% if flash[:error].present? %>
-    <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
-      <%= flash[:error].html_safe %>
-      <br/>
-    </div>
-    <% end %>
-    <%= yield %>
-  </div>
+    </head>
+    <body>
+        <header>
+            <div class="col-xs-3">
+                <%= link_to root_path, class: 'logo' do %>
+                <div class="circle">
+                    <br/>
+                    You Know
+                    <br/>
+                    you need
+                    <br/>
+                    to code
+                </div>
+                <% end %>
+            </div>
+            <div class="col-xs-4 slogan">
+                Splurting out unsolicited advvice about Doing You since 2016
+            </div>
+            <div class="col-xs-5 links">
+                <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'}%>
+                <%= link_to 'About', about_path %>
+            </div>
+        </header>
 
-  <div class="footer">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Contribute Your Quote</h4>
+                    </div>
+
+                    <%= simple_form_for Quote.new do |f| %>
+                      <div class="modal-body">
+                          <%= f.input :saying %>
+                          <%= f.input :author %>
+                      </div>
+                    <br/>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <%= f.submit 'Add Quote', class: 'btn btn-danger'%>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr/>
+    <br class="clear"/>
+
     <div class="container">
-      <div class = 'col-xs-6'>
-        <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote'%>
-      </div>
-      <div class="col-xs-6 footer-blurb">
-        One so one begins the journey, attempted by many.
-        <a href="https://ca.linkedin.com/in/stephen-akuffo-28729719">Stephen Akuffo </a>
-      </div>
+        <% if flash[:error].present? %>
+        <div class="col-xs-10 col-xs-offset-1 alert alert-danger">
+            <%= flash[:error].html_safe %>
+            <br/>
+        </div>
+        <% end %>
+        <%= yield %>
     </div>
-  </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class='col-xs-6'>
+                <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote'%>
+            </div>
+            <div class="col-xs-6 footer-blurb">
+                One so one begins the journey, attempted by many.
+                <a href="https://ca.linkedin.com/in/stephen-akuffo-28729719">Stephen Akuffo
+                </a>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
