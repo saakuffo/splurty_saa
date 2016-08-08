@@ -1,3 +1,4 @@
 == README
 
-Nobody is here
+Stephen Akuffo
+-- Web Developer
