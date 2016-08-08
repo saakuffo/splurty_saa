@@ -1,7 +1,3 @@
 == README
 
-This is a simple app that uses the Rails framework to connect to a database, so quotes and people who said them
-
-- It uses simple forms  to build the forms for entry
-- Fonts are from Google fonts and have an OFL
-
+Stephen Akuffo
