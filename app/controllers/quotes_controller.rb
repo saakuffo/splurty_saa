@@ -1,6 +1,7 @@
 class QuotesController < ApplicationController
   def index
     @quote = Quote.order("RANDOM()").first
+    redirect_to first_quote_path unless @quote
   end
 
   def create

@@ -19,8 +19,8 @@ development:
   encoding: unicode
   database: splurty_saa_development
   pool: 5
-  username: postgres
-  password: password
+  username: vagrant
+  password: vagrant
   host: localhost
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -49,8 +49,8 @@ test:
   encoding: unicode
   database: splurty_saa_test
   pool: 5
-  username: postgres
-  password: password
+  username: vagrant
+  password: vagrant
   host: localhost
 
 production:
@@ -58,6 +58,6 @@ production:
   encoding: unicode
   database: splurty_saa_production
   pool: 5
-  username: postgres
-  password: password
+  username: vagrant
+  password: vagrant
   host: localhost

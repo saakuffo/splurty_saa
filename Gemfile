@@ -37,6 +37,9 @@ gem 'sprockets', '2.11.0'
 # simple form install TFH req
 gem 'simple_form'
 
+group :development, :test do
+  gem 'rspec', '~> 3.4'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
