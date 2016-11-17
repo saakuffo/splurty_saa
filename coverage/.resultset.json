@@ -1,0 +1,13 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/vagrant/src/splurty_saa/app/models/quote.rb": [
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1479404764
+  }
+}
