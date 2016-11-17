@@ -1,5 +1,6 @@
 [![codecov](https://codecov.io/gh/saakuffo/splurty_saa/branch/master/graph/badge.svg)](https://codecov.io/gh/saakuffo/splurty_saa)
-[![Codeship for saakuffo/splurty_saa](https://app.codeship.com/projects/94ad3bb0-8f15-0134-d1ca-7e278487eb68/status?branch=master)](https://app.codeship.com/projects/185460)
+[![Codeship](https://app.codeship.com/projects/94ad3bb0-8f15-0134-d1ca-7e278487eb68/status?branch=master)](https://app.codeship.com/projects/185460)
+
 == Quote Generator
 
 This is a ruby on rails app that 
