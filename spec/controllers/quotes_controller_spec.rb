@@ -27,4 +27,11 @@ RSpec.describe QuotesController do
       expect(response).to redirect_to root_path
     end
   end
+
+  describe "quotes#about action" do
+    it 'the abouts action should send us to the about page' do
+      get :about
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
