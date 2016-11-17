@@ -1,6 +1,71 @@
 {
   "RSpec": {
     "coverage": {
+      "/vagrant/src/splurty_saa/app/controllers/quotes_controller.rb": [
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/vagrant/src/splurty_saa/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/vagrant/src/splurty_saa/spec/models/quotes_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/vagrant/src/splurty_saa/app/models/quote.rb": [
         1,
         1,
@@ -8,6 +73,6 @@
         null
       ]
     },
-    "timestamp": 1479404764
+    "timestamp": 1479407504
   }
 }
