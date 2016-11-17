@@ -1,4 +1,5 @@
 [![codecov](https://codecov.io/gh/saakuffo/splurty_saa/branch/master/graph/badge.svg)](https://codecov.io/gh/saakuffo/splurty_saa)
+
 == Quote Generator
 
 This is a ruby on rails app that 
