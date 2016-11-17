@@ -38,7 +38,13 @@ gem 'sprockets', '2.11.0'
 gem 'simple_form'
 
 group :development, :test do
-  gem 'rspec', '~> 3.4'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails', '~> 4.5'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'byebug'
+  gem 'simplecov', require: false
+  gem 'codecov', require: false, group: :test
 end
 
 group :doc do
