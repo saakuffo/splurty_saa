@@ -43,6 +43,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'byebug'
+  gem 'rubocop'
   gem 'simplecov', require: false
   gem 'codecov', require: false, group: :test
 end

@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   def index
-    @quote = Quote.order("RANDOM()").first
+    @quote = Quote.order('RANDOM()').first
     redirect_to first_quote_path unless @quote
   end
 
@@ -16,9 +16,8 @@ class QuotesController < ApplicationController
   end
 
   private
+
   def quote_params
     params.require(:quote).permit(:saying, :author)
   end
 end
-
-
