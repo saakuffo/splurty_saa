@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe QuotesController do
   describe 'quotes#index actions' do
-    it 'if there is a quote in the DB go to index' do
+    it 'should display the normal index is quotes are in the DB' do
       quote = FactoryGirl.create(:quote)
       get :index
       expect(response).to have_http_status(:success)
     end
 
-    it 'if the database is empty it should go to first quote page' do
+    it 'should display the first_quote page if the DB is empty' do
       quote = FactoryGirl.create(:quote)
       quote.delete
       get :index
@@ -17,19 +17,19 @@ RSpec.describe QuotesController do
   end
 
   describe 'quotes#create actions' do
-    it 'if the quote is invalid display a flash message detailing a failure to create quote' do
+    it 'should load up flash with and error if the quote attributes are invalid' do
       post :create, quote: { saying: 'a', author: 'a' }
       expect(flash[:error]).to eq '<strong>Could not save</strong> the data you entered is invalid'
     end
 
-    it 'if the quote is valid redirect to root path' do
+    it 'should create a quote and redirect to the home page if the quote is valid' do
       post :create, quote: { saying: 'a' * 3, author: 'a' * 3 }
       expect(response).to redirect_to root_path
     end
   end
 
   describe 'quotes#about action' do
-    it 'the abouts action should send us to the about page' do
+    it 'should load the about page' do
       get :about
       expect(response).to have_http_status(:success)
     end
